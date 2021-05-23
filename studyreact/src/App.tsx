@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import TaskList from './components/TaskList'
+import TaskInput from './components/TaskInput'
 import {Task} from './Types'
 import './App.css'
 
@@ -20,7 +21,8 @@ const App: React.FC = () => {
   const [tasks, setTasks] = useState(initialState)
   return (
     <div>
-            <TaskList tasks={tasks} />
+            <TaskInput tasks={tasks} setTasks={setTasks}/ >
+            <TaskList tasks={tasks} setTasks={setTasks}/>
     </div>
   )
 }
